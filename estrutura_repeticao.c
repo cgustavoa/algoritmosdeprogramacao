@@ -2,31 +2,26 @@
 
 int main(){
 
-
-    int i = 0;
     int nota;
 
-    
-    printf("Insira uma nota positiva\n");
-    scanf("%d", &nota);
-    
+    // imprima a mensagem e leia a nota pelo menos uma vez
     do{
-        printf("Valor de i: %d!!!!\n", i);
+        printf("Insira uma nota positiva:\n");
         scanf("%d", &nota);
-    } while(nota > 0);
-
-    printf("Nota lida: %d\n", nota);
+    } while(nota < 0);
 
 
+    printf("Insira uma nota positiva:\n");
+    scanf("%d", &nota);
+    // while so roda se nota inserida for negativa. 
+    while(nota < 0){
+        printf("Insira uma nota positiva:\n");
+        scanf("%d", &nota);
+    }
 
-
-
-
-
-//   for(int i = 0; 1 <= 2; i++){
-//        printf("Valor de i: %d!!!!\n", i);
-//   }
-//
-//   printf("Saiu do for\n");
-//    return 0;
+    // imprima o valor de "i" 4 vezes
+    for(int i = 0; i <= 3; i++){
+        printf("Valor de i: %d!!!!\n", i);
+    }
+    return 0;
 }
